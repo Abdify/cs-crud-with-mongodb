@@ -5,7 +5,6 @@ import { toast } from "react-toastify";
 const EditProduct = () => {
   const router = useParams();
   const [product, setProduct] = useState({});
-  const [refresh, setRefresh] = useState(false);
   const { id } = router;
   const navigate = useNavigate();
 
@@ -20,7 +19,7 @@ const EditProduct = () => {
         }
       })
       .catch((err) => toast.error(err.message));
-  }, [refresh, id]);
+  }, [id]);
 
 
   const handleSubmit = async (e) => {

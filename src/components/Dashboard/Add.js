@@ -5,7 +5,7 @@ const Add = () => {
     e.preventDefault();
     const product = {
       name: e.target.name.value,
-      price: e.target.price.value,
+      price: parseInt(e.target.price.value),
       image: e.target.image.value,
     };
 
