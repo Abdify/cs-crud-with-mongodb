@@ -1,4 +1,3 @@
-import { toast } from "react-toastify";
 
 const Add = () => {
   const handleSubmit = (e) => {
@@ -9,23 +8,7 @@ const Add = () => {
       image: e.target.image.value,
     };
 
-    fetch("http://localhost:5000/product", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json"
-      },
-      body: JSON.stringify(product)
-    }).then(res => res.json())
-    .then(data => {
-      if(data.success){
-        toast.success(data.message);
-      } else {
-        toast.error(data.error);
-      }
-    })
-    .catch(err => {
-      toast.error(err.message);
-    })
+    console.log(product);
     
   };
   
